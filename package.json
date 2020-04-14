@@ -1,0 +1,13 @@
+{
+  "name": "optimizelycli",
+  "version": "1.0.0",
+  "description": "This is a CLI app to help engineers make API calls to Optimizely's REST API.",
+  "bin": {
+    "optimizelyCLI": "bin/optimizelyCLI"
+  },
+  "scripts": {},
+  "devDependencies": {},
+  "dependencies": {},
+  "author": "Peter Parisi, Rocky McGredy",
+  "license": "MIT"
+}
