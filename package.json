@@ -7,7 +7,9 @@
   },
   "scripts": {},
   "devDependencies": {},
-  "dependencies": {},
+  "dependencies": {
+    "minimist": "^1.2.5"
+  },
   "author": "Peter Parisi, Rocky McGredy",
   "license": "MIT"
 }
