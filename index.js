@@ -28,7 +28,7 @@ module.exports = () => {
         case 'help':
             require('./cmds/help')(args)
             break
-            
+
         default:
             console.log(`"${cmd}" is not a valid command. Please check your spelling and try again.`)
             break
@@ -38,3 +38,6 @@ module.exports = () => {
 // Try running the following commands from the root directory:
 // sudo npm link
 // optimizelyCLI "hello world"
+// optimizelyCLI help
+// optimizelyCLI help create
+// optimizelyCLI -v
