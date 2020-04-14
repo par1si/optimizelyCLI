@@ -8,6 +8,7 @@
   "scripts": {},
   "devDependencies": {},
   "dependencies": {
+    "dotenv": "^8.2.0",
     "minimist": "^1.2.5"
   },
   "author": "Peter Parisi, Rocky McGredy",
