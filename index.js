@@ -15,6 +15,10 @@ module.exports = () => {
         cmd = 'help'
     }
 
+    if(args.register || args.r) {
+        cmd = 'register'
+    }
+
 
     switch(cmd) {
         case 'hello world':
@@ -27,6 +31,10 @@ module.exports = () => {
 
         case 'help':
             require('./cmds/help')(args)
+            break
+
+        case 'register':
+            require('./cmds/register')(args)
             break
 
         default:
