@@ -10,7 +10,8 @@ const menus = {
     create: `
     optimizelyCLI create [endpoint] <options>
 
-    -c "endpoint" ................... makes a "post" request to the specified endpoint.
+    -c || create "endpoint" ................... makes a "post" request to the specified endpoint.
+    -c "projects" -n "name" ...... creates a new Full Stack project with the associated SDK.
     `
 }
 
