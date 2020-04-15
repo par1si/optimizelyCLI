@@ -38,10 +38,3 @@ module.exports = async () => {
             break
     }
 }
-
-// Try running the following commands from the root directory:
-// sudo npm link
-// optimizelyCLI "hello world"
-// optimizelyCLI help
-// optimizelyCLI help create
-// optimizelyCLI -v
