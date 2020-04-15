@@ -19,6 +19,10 @@ module.exports = async () => {
         cmd = 'register'
     }
 
+    if (args.create || args.c) {
+        cmd = 'create'
+    }
+
 
     switch(cmd) {
         case 'register':
@@ -31,6 +35,10 @@ module.exports = async () => {
 
         case 'help':
             require('./cmds/help')(args)
+            break
+
+        case 'create':
+            require('./cmds/create')(args)
             break
 
         default:

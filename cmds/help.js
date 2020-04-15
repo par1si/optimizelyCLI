@@ -7,10 +7,10 @@ const menus = {
     [command] help .................. displays the help menu for that command.
     register "API KEY"............... saves your API key to a local file for use in future API calls.
     `,
-    sampleCommand: `
-    optimizelyCLI sampleCommand [command] <options>
+    create: `
+    optimizelyCLI create [endpoint] <options>
 
-    createFeature ................... creates a new Optimizely feature for the specified project option.
+    -c "endpoint" ................... makes a "post" request to the specified endpoint.
     `
 }
 
