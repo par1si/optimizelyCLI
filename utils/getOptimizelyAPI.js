@@ -9,6 +9,6 @@ module.exports = async function getData (endpoint) {
       Authorization: `Bearer ${process.env.OPTLY_API_KEY}`
     }
   })
-  console.log(results)
+  return results
 }
 
