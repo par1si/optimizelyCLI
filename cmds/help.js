@@ -5,7 +5,7 @@ const menus = {
     version or -v ................... prints the local version of the app to the console.
     help or -h ...................... displays the help menu.
     [command] help .................. displays the help menu for that command.
-    register "API KEY"............... saves your API key to a local file for use in future API calls.
+    register "Personal API Token".... saves your API token to a local file for use in future API calls.
     `,
     create: `
     optimizelyCLI create [endpoint] <options>
