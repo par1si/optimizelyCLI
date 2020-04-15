@@ -2,10 +2,13 @@ const menus = {
     main: `
     optimizelyCLI [command] <options>
 
-    hello world ..................... log "Hello World" to the console.
+    version or -v ................... prints the local version of the app to the console.
+    help or -h ...................... displays the help menu.
+    [command] help .................. displays the help menu for that command.
+    register "API KEY"............... saves your API key to a local file for use in future API calls.
     `,
-    create: `
-    optimizelyCLI create [command] <options>
+    sampleCommand: `
+    optimizelyCLI sampleCommand [command] <options>
 
     createFeature ................... creates a new Optimizely feature for the specified project option.
     `

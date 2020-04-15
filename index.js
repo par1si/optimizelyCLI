@@ -21,10 +21,6 @@ module.exports = async () => {
 
 
     switch(cmd) {
-        case 'hello world':
-            require('./cmds/hello_world')(args)
-            break
-
         case 'register':
             require('./cmds/register')(args)
             break

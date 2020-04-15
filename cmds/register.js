@@ -8,6 +8,6 @@ module.exports = (args) => {
         if(err) {
             return console.log(err);
         }
-        console.log("Optimizely API Key Registered");
+        console.log(`Optimizely API Key registered with the value "${apiKey}.`);
     }); 
 } 

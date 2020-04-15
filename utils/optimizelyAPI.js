@@ -1,9 +1,11 @@
 const axios = require('axios')
+require('dotenv').config()
 
 module.exports = async (endpoint) => {
   const results = await axios({
     method: 'get',
-    url: `https://dog.ceo/api/breeds/image/random` // replace with Optimizely specific URL with ${endpoint} specified
+    apiKey: process.env.OPTLY_API_KEY,
+    url: `Optimizely REST API URL/${endpoint}` // replaced with Optimizely specific URL with ${endpoint} specified
   })
 
   return results
