@@ -2,7 +2,6 @@
 const minimist = require('minimist');
 
 
-
 module.exports = async () => {
 
     const args = minimist(process.argv.slice(2))
@@ -16,8 +15,8 @@ module.exports = async () => {
         cmd = 'help'
     }
 
-    if (args.api) {
-        cmd = 'api'
+    if (args.register || args.r) {
+        cmd = 'register'
     }
 
 
@@ -26,8 +25,8 @@ module.exports = async () => {
             require('./cmds/hello_world')(args)
             break
 
-        case 'api':
-            require('./cmds/api')(args)
+        case 'register':
+            require('./cmds/register')(args)
             break
 
         case 'version':
