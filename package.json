@@ -8,8 +8,10 @@
   "scripts": {},
   "devDependencies": {},
   "dependencies": {
+    "axios": "^0.19.2",
     "dotenv": "^8.2.0",
-    "minimist": "^1.2.5"
+    "minimist": "^1.2.5",
+    "ora": "^4.0.3"
   },
   "author": "Peter Parisi, Rocky McGredy",
   "license": "MIT"

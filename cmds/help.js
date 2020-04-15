@@ -5,7 +5,7 @@ const menus = {
     hello world ..................... log "Hello World" to the console.
     `,
     create: `
-    optimizelyCLI [command] <options>
+    optimizelyCLI create [command] <options>
 
     createFeature ................... creates a new Optimizely feature for the specified project option.
     `
