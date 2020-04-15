@@ -1,4 +1,4 @@
-const optimizelyAPI = require('../utils/optimizelyAPI');
+const optimizelyAPI = require('./optimizelyAPI');
 const ora = require('ora');
 
 module.exports = async (args) => {
