@@ -9,3 +9,4 @@ module.exports = (args) => {
     optimizelyAPI(`${endpoint}`, 'post', JSON.stringify(data))
 } 
 
+// Sample command: optimizelyCLI -c "projects" -n "New Project"
