@@ -1,13 +1,15 @@
 const optimizelyAPI = require('../utils/optimizelyAPI');
+const projectsJSON = require('../json/projects');
 
 module.exports = (args) => {
-    const endpoint = args.c
-    const data = {
-        "name": args.n,
-        "platform": "custom"
-    }
+    // I'm thinking of implementing a switch/case statement here for args.c variable
 
-    optimizelyAPI(`${endpoint}`, 'post', JSON.stringify(data))
+    const endpoint = args.c
+    const data = projectsJSON(args)
+
+    var string = JSON.stringify(data);
+
+    optimizelyAPI(`${endpoint}`, 'post', string)
 } 
 
 // Sample command: optimizelyCLI -c "projects" -n "New Project"

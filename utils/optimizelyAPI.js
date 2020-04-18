@@ -13,5 +13,8 @@ module.exports = async function (endpoint, method, data) {
     },
     data: data
   })
+  console.log(`\nMaking a ${method} request to the /${endpoint} endpoint with the following payload:\n
+  ${data}.
+  `)
   return results
 }

@@ -11,7 +11,19 @@ const menus = {
     optimizelyCLI create [endpoint] <options>
 
     -c || create "endpoint" ................... makes a "post" request to the specified endpoint.
-    -c "projects" -n "name" ...... creates a new Full Stack project with the associated SDK.
+    -c "projects" [args] ...................... creates a new Full Stack project with the associated SDK.
+
+    create "projects" command line arguments  -----------------------------------------------------------
+    -ct ....................................... sets the confidence threshold for the project. [0 - 1.0].
+    -d ........................................ sets the descriptions for the project.
+    -n (required) ............................. sets the name for the project.
+    -s ........................................ sets the status for the project (e.g. "active").
+    -tpp ...................................... sets the third-party-platform for the project.
+   
+    example command:
+    
+    optimizelyCLI -c "projects" -ct "0.9" -d "My first project!" -n "Hello world!" -s "Active" -tpp "Salesforce"
+
     `
 }
 
