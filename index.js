@@ -23,6 +23,10 @@ module.exports = async () => {
         cmd = 'create'
     }
 
+    if (args.get || args.g) {
+        cmd = 'get'
+    }
+
 
     switch(cmd) {
         case 'register':
@@ -39,6 +43,10 @@ module.exports = async () => {
 
         case 'create':
             require('./cmds/create')(args)
+            break
+
+        case 'get':
+            require('./cmds/get')(args)
             break
 
         default:

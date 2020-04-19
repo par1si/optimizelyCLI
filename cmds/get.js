@@ -1,5 +1,4 @@
 const optimizelyAPI = require('../utils/optimizelyAPI');
-const projectsJSON = require('../json/projects');
 
 module.exports = (args) => {
     let endpoint
@@ -9,10 +8,7 @@ module.exports = (args) => {
         endpoint = "projects"
     }
 
-    const data = projectsJSON(args)
-    var string = JSON.stringify(data);
-
-    optimizelyAPI(`${endpoint}`, 'post', string)
+    optimizelyAPI(`${endpoint}`, 'get', undefined)
 } 
 
-// Sample command: optimizelyCLI -c "projects" -n "New Project"
+// Sample command: optimizelyCLI -g "projects"

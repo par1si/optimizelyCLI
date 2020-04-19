@@ -24,6 +24,16 @@ const menus = {
     
     optimizelyCLI -c "projects" -ct "0.9" -d "My first project!" -n "Hello world!" -s "Active" -tpp "Salesforce"
 
+    `,
+
+    get: `
+    optimizely CLI get [endpoint] <options>
+    
+    example commands:
+
+    optimizelyCLI -g projects
+    optimizelyCLI -g p
+    
     `
 }
 
