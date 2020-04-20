@@ -4,6 +4,7 @@ require('dotenv').config()
 
 
 module.exports = async function (endpoint, method, data) {
+
   // Initialize spinner
   const spinner = ora().start()
 
@@ -27,11 +28,13 @@ module.exports = async function (endpoint, method, data) {
         url,
         headers: {
           Authorization: `Bearer ${process.env.OPTLY_API_KEY}`
-        }
+        },
+        params: params
       })
     };
 
-    let string = JSON.stringify(results.data)
+    let string = JSON.stringify(results.data, null, 2);
+
 
     if (method === 'post') {
       console.log(`\nMaking a ${method} request to the /${endpoint} endpoint with the following payload:\n${data}.`)

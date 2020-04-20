@@ -32,7 +32,14 @@ const menus = {
     example commands:
 
     optimizelyCLI -g projects
-    optimizelyCLI -g p
+    
+    --------------------------------------------------------
+
+    optimizelyCLI -g experiments --pid [project_id] ........ Makes a get request to the experiments endpoint and returns all experiments.
+    <options>
+    --pid (project_id) ......... required.
+
+    --------------------------------------------------------
     
     `
 }
