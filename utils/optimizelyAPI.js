@@ -2,6 +2,8 @@ const axios = require('axios')
 const ora = require('ora');
 require('dotenv').config()
 
+const token = process.env.OPTLY_API_KEY
+
 
 module.exports = async function (endpoint, method, data) {
 
@@ -16,7 +18,7 @@ module.exports = async function (endpoint, method, data) {
         method: method,
         url,
         headers: {
-          Authorization: `Bearer ${process.env.OPTLY_API_KEY}`,
+          Authorization: `Bearer ${token}`,
           'Content-Type': 'application/json',
         },
         data: data
@@ -27,7 +29,7 @@ module.exports = async function (endpoint, method, data) {
         method: method,
         url,
         headers: {
-          Authorization: `Bearer ${process.env.OPTLY_API_KEY}`
+          Authorization: `Bearer ${token}`
         },
         params: params
       })
