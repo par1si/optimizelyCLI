@@ -2,6 +2,7 @@ const axios = require('axios')
 const ora = require('ora');
 require('dotenv').config()
 
+
 const token = process.env.OPTLY_API_KEY
 
 
@@ -34,20 +35,6 @@ module.exports = async function (endpoint, method, data) {
         params: params
       })
     };
-
-    let string = JSON.stringify(results.data, null, 2);
-
-
-    if (method === 'post') {
-      console.log(`\nMaking a ${method} request to the /${endpoint} endpoint with the following payload:\n${data}.`)
-    } else if (method === 'put') {
-      // do something
-    } else {
-      console.log(`\nMaking a ${method} request to the /${endpoint} endpoint.`)
-      console.log(`Data:\n
-      ${string}
-      `)
-    }
 
     spinner.stop()
   } catch (err) {

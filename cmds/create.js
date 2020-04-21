@@ -1,7 +1,9 @@
 const optimizelyAPI = require('../utils/optimizelyAPI');
 const projectsJSON = require('../json/projects');
+const print = require('../utils/print');
 
 module.exports = (args) => {
+    const method = 'post'
     let endpoint
 
     // Parser when endpoint is entered incorrectly.
@@ -12,7 +14,8 @@ module.exports = (args) => {
     const data = projectsJSON(args)
     var string = JSON.stringify(data);
 
-    optimizelyAPI(`${endpoint}`, 'post', string)
+    let results = optimizelyAPI(`${endpoint}`, method, string)
+    print(results, endpoint, method, string);
 } 
 
 // Sample command: optimizelyCLI -c "projects" -n "New Project"

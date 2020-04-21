@@ -27,6 +27,10 @@ module.exports = async () => {
         cmd = 'get'
     }
 
+    if (args.summary || args.s) {
+        cmd = 'summary'
+    }
+
 
     switch(cmd) {
         case 'register':
@@ -47,6 +51,10 @@ module.exports = async () => {
 
         case 'get':
             require('./cmds/get')(args)
+            break
+
+        case 'summary':
+            require('./cmds/summary')(args)
             break
 
         default:
