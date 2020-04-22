@@ -41,20 +41,21 @@ module.exports = async (args) => {
 
     let resultArray = await getExperimentArrayResults();
 
-    printResults = (arr) => {
+    printResults = (arr, arr2) => {
         for (i = 0; i < arr.length; i++) {
+            console.log(`\nExperiment ID ${arr2[i]} - event name '${resultArray[i][0].name}' results:`)
             let obj = resultArray[i][0].results
             for (let [key, value] of Object.entries(obj)) {
                 if (value.is_baseline === true) {
-                    console.log(`Variation '${value.name}' is the control variation.`)
+                    console.log(`\n  In the variation '${value.name}', '${resultArray[i][0].name}' is the baseline.`)
                 } else {
-                    console.log(`Variation '${value.name}' is at ${value.lift.significance.toFixed(2) * 100}% statistical significance.`)
+                    console.log(`  In the variation '${value.name}', '${resultArray[i][0].name}' is at ${value.lift.significance.toFixed(2) * 100}% statistical significance.`)
                 }
               }
         }
     }
 
-    printResults(resultArray);
+    printResults(resultArray, experimentIdArray);
     
 
     
